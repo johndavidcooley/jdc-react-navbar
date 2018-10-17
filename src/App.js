@@ -23,7 +23,7 @@ export default class App extends Component {
     let user = users.filter(user => user.username === loginInfo.username && user.password === loginInfo.password);
     if (user.length) {
       this.setState({loggedIn: true})
-      setTimeout(this.props.history.push('/home'), 1000);
+      this.props.history.push('/home');
     } else {
       alert('Login failed. Please try again.');
     }

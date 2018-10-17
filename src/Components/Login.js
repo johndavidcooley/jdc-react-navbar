@@ -15,7 +15,7 @@ export default class Login extends Component {
     this.setState({password: e.target.value});
   }
 
-  handleSubmit = (e) => {
+  handleSubmit = e => {
     e.preventDefault();
     const loginInfo = {
       username: this.state.username,
