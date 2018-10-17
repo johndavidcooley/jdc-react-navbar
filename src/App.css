@@ -1,32 +1,116 @@
-.App {
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+:root {
+  --font-color: #494949;
+  --nav-background: #83EDD9;
+}
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background: #FFF;
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  font-size: 20px;
+  background-color: var(--nav-background);
+}
+
+.main-nav * {
+  color: var(--font-color);
+  
+}
+
+.main-nav a {
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.main-nav a:hover, .main-nav button:hover {
+  color: navy;
+}
+
+.main-nav a.active {
+  color: #FFF;
+}
+
+.main-nav button {
+  font-size: 20px;
+  border: none;
+  background: none;
+  margin-right: 10px;
+}
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.login * {
+  color: var(--font-color);
+}
+
+.login form {
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.login input {
+  display: block;
+  margin-bottom: 20px;
+  height: 20px;
+  width: 200px;
+  border: 2px solid var(--font-color);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.login button {
+  height: 30px;
+  width: 206px;
+  border: 2px solid var(--nav-background);
+  font-size: 20px;
+  font-weight: bold;
+  background: none;
+}
+
+.login *:focus {
+  outline: none;
+}
+
+.login button:hover {
+  background: var(--nav-background);
+}
+
+.home, .products, .work, .about, .join {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  margin-top: 50px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 700px) {
+  .main-nav {
+    height: 150px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .main-nav .left {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .main-nav .left a {
+    text-align: center;
   }
 }
